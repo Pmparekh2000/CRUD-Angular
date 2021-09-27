@@ -1,1 +1,16 @@
-<p>edit-employee works!</p>
+<div>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <div class="form-group col">
+                <label>First Name:</label>
+                <input type="text" formControlName="firstName" [(ngModel)]="employee.firstName">
+                <label>Last Name:</label>
+                <input type="text" formControlName="lastName" [(ngModel)]="employee.lastName">
+                <label>Email:</label>
+                <input type="text" formControlName="email" [(ngModel)]="employee.email">
+                <label>Salary:</label>
+                <input type="text" formControlName="salary" [(ngModel)]="employee.salary">
+            </div>
+        </div>
+    </form>    
+</div>
